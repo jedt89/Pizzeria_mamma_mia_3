@@ -34,6 +34,16 @@ const RegisterDialog = ({ registry, isOpen, onOpenChange, onClose }) => {
   const checkFormData = () => {
     if (registry) {
       if (
+        !userMail ||
+        userMail == '' ||
+        !userPassword ||
+        userPassword == '' ||
+        !repeatPassword ||
+        repeatPassword == '' ||
+        userPassword != repeatPassword
+      ) {
+        setRegistryError('Debes llenar todos los campos correctamente.');
+      } else if (
         userMail &&
         userPassword &&
         repeatPassword &&
@@ -43,7 +53,7 @@ const RegisterDialog = ({ registry, isOpen, onOpenChange, onClose }) => {
         clearModalData();
         setTimeout(() => alert(REGISTRY_SUCCESSFULLY), 100);
       } else {
-        setRegistryError('Debes llenar todos los campos correctamente.');
+        return;
       }
     } else if (
       userMail === USER &&
@@ -136,6 +146,7 @@ const RegisterDialog = ({ registry, isOpen, onOpenChange, onClose }) => {
                   variant='bordered'
                   isInvalid={!!emailError}
                   onChange={(e) => {
+                    setRegistryError('');
                     setUserMail(e.target.value);
                     checkEmptyData(e.target.value, 'email');
                   }}
@@ -154,6 +165,7 @@ const RegisterDialog = ({ registry, isOpen, onOpenChange, onClose }) => {
                   variant='bordered'
                   isInvalid={!!passError}
                   onChange={(e) => {
+                    setRegistryError('');
                     setUserPassword(e.target.value);
                     checkEmptyData(e.target.value, 'pass');
                   }}
@@ -173,6 +185,7 @@ const RegisterDialog = ({ registry, isOpen, onOpenChange, onClose }) => {
                     variant='bordered'
                     isInvalid={!!repeatPassError}
                     onChange={(e) => {
+                      setRegistryError('');
                       setRepeatPassword(e.target.value);
                       checkEmptyData(e.target.value, 'repeatPass');
                     }}
@@ -203,15 +216,9 @@ const RegisterDialog = ({ registry, isOpen, onOpenChange, onClose }) => {
                 Cancelar
               </Button>
               <Button
-                onClick={checkFormData}
+                onClick={() => checkFormData()}
                 variant='ghost'
                 color='warning'
-                disabled={
-                  !userMail ||
-                  !userPassword ||
-                  (registry && !repeatPassword) ||
-                  (registry && userPassword !== repeatPassword)
-                }
               >
                 Aceptar
               </Button>

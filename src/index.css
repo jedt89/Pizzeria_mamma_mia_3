@@ -167,9 +167,8 @@ button {
   align-items: center;
   position: sticky;
   top: 0;
-  background: #004643;
+  background: #003c3a;
   z-index: 999;
-  border-bottom: 1px solid rgba(255, 166, 0, 0.5);
 }
 
 .navbar-buttons-container {
