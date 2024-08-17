@@ -41,7 +41,7 @@ const Navbar = ({ token, total, items, disabledButtons, cartOpen }) => {
                 color='warning'
               ></Button>
             </DropdownTrigger>
-            <DropdownMenu disabledKeys={disabledButtons}>
+            <DropdownMenu disabledKeys={disabledButtons} disableAnimation={true}>
               {items.map(({ key, label, icon, action }) => {
                 return (
                   <DropdownItem

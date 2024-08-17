@@ -114,6 +114,7 @@ const RegisterDialog = ({ registry, isOpen, onOpenChange, onClose }) => {
   return (
     <Modal
       isOpen={isOpen}
+      onClose={onClose}
       onOpenChange={onOpenChange}
       isDismissable={false}
       isKeyboardDismissDisabled
