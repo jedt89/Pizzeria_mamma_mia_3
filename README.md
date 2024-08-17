@@ -1,8 +1,41 @@
-# React + Vite
+# Pizzería mamma mía 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+➡️ Applicación web para la venta de pizzas (HITO 3)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+# Deploy 🛜
+➡️ https://jedt89.github.io/Pizzeria_mamma_mia_3
+
+🧒 USER: 1234567
+
+🔒 PASSWORD: 1234567
+
+
+
+# Tecnologías utilizadas 
+
+🚀 React: Librería de construcción para interfaces de usuario.
+
+🚀 Vite: Motor de creación de aplicaciones.
+
+🚀 Next UI: Librería de componentes para react.
+
+🚀 Framer Motion: Librería de animaciones para react, incluídas con Next UI.
+
+🚀 React-icons: Librería de iconos para react.
+
+🚀 gh-pages: Motor de despliegue de aplicación en GitHub Pages.
+
+
+
+# Instalación
+
+1.- Clona el repositorio:
+➡️ git clone https://github.com/jedt89/Pizzeria_mamma_mia_3.git
+
+2.-Navega al directorio del proyecto e instala las dependencias:
+➡️ npm install
+
+3.- Ejecuta la aplicación en modon dev:
+➡️ npm run dev
