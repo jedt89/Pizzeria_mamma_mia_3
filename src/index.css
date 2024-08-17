@@ -352,11 +352,12 @@ svg.appearance-none {
   background-color: rgba(50, 205, 50, 0.1);
   font-size: 11px;
   color: limegreen;
+  border: 1px solid orange;
 
   img {
     max-height: 75px;
     border-radius: 3px !important;
-    margin-right: 10px;
+    margin: 4px;
   }
 }
 
@@ -380,7 +381,8 @@ svg.appearance-none {
   }
 
   .quantity {
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     font-weight: bold;
     font-size: 14px;
   }
@@ -430,7 +432,6 @@ svg.appearance-none {
   .nav-container {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1rem;
     padding: 0px;
     padding-bottom: 1rem !important;
   }

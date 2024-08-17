@@ -40,7 +40,7 @@ const CartPizzaCard = ({
       </div>
 
       <div className='flex-column align-items-center'>
-        <div className='display-flex justify-center gap-1rem cart-card-buttons'>
+        <div className='display-flex justify-center gap-1rem cart-card-buttons align-items-center'>
           <Button
             variant='ghost'
             color='warning'
@@ -49,7 +49,9 @@ const CartPizzaCard = ({
           >
             <FiMinusCircle color='orange' />
           </Button>
-
+          <span>
+            <span className='quantity'>{quantity}</span>
+          </span>
           <Button
             variant='ghost'
             color='warning'
@@ -61,9 +63,6 @@ const CartPizzaCard = ({
         </div>
 
         <div className='cart-card-buttons'>
-          <span>
-            <span className='quantity'>{quantity}</span>
-          </span>
           <h2>Total: ${total.toLocaleString('es-CL')}</h2>
         </div>
       </div>
